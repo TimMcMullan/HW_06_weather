@@ -685,6 +685,27 @@ p {
     border-radius: var(--border-radius);
   }
   
+  .today {
+      padding: 4%;
+      font-size: larger;
+      background-color:rgb(29, 153, 255);
+      color: white;
+      border-radius: 6px;
+      
+  }
+
+  .tomorrowForward {
+      padding: 2%;
+      background-color:rgb(193, 226, 233);
+      margin: 2%;
+  }
+
+  .daily {
+      padding: 2%;
+      margin: 2%;
+      border-radius: 4px;
+  }
+
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
     min-height: 100vh;

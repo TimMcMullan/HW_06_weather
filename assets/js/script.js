@@ -11,37 +11,38 @@ function placeDataOnPage(url) {
         console.log(globalApiData);
 
         $('#day1 .city span').text(data.city.name);
+        $('#day1 .currently span').text(data.list[0].weather[0].description)
         $('#day1 .temp span').text(data.list[0].main.temp);
         $('#day1 .humidity span').text(data.list[0].main.humidity);
-        $('#day1 .windspeed span').text(data.list[0].main.windspeed);
+        $('#day1 .windspeed span').text(data.list[0].wind.speed);
         // $('#day1 .uv_index span').text(data.list[0].main.uv_index);
         $('#day1 .feelslike span').text(data.list[0].main.feels_like);
 
         $('#day2 .city span').text(data.city.name);
         $('#day2 .temp span').text(data.list[1].main.temp);
         $('#day2 .humidity span').text(data.list[1].main.humidity);
-        $('#day2 .windspeed span').text(data.list[1].main.windspeed);
+        $('#day2 .windspeed span').text(data.list[1].wind.speed);
         // $('#day2 .uv_index span').text(data.list[1].main.uv_index);
         $('#day2 .feelslike span').text(data.list[1].main.feels_like);
 
         $('#day3 .city span').text(data.city.name);
         $('#day3 .temp span').text(data.list[2].main.temp);
         $('#day3 .humidity span').text(data.list[2].main.humidity);
-        $('#day3 .windspeed span').text(data.list[2].main.windspeed);
+        $('#day3 .windspeed span').text(data.list[2].wind.speed);
         // $('#day3 .uv_index span').text(data.list[2].main.uv_index);
         $('#day3 .feelslike span').text(data.list[2].main.feels_like);
 
         $('#day4 .city span').text(data.city.name);
         $('#day4 .temp span').text(data.list[3].main.temp);
         $('#day4 .humidity span').text(data.list[3].main.humidity);
-        $('#day4 .windspeed span').text(data.list[3].main.windspeed);
+        $('#day4 .windspeed span').text(data.list[3].wind.speed);
         // $('#day4 .uv_index span').text(data.list[3].main.uv_index);
         $('#day4 .feelslike span').text(data.list[3].main.feels_like);
 
         $('#day5 .city span').text(data.city.name);
         $('#day5 .temp span').text(data.list[4].main.temp);
         $('#day5 .humidity span').text(data.list[4].main.humidity);
-        $('#day5 .windspeed span').text(data.list[4].main.windspeed);
+        $('#day5 .windspeed span').text(data.list[4].wind.speed);
         // $('#day5 .uv_index span').text(data.list[4].main.uv_index);
         $('#day5 .feelslike span').text(data.list[4].main.feels_like);
 

@@ -2,56 +2,104 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- styles  -->
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/reset.css"
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
-  <title>Weather</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- styles  -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css" <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Weather</title>
 </head>
 
 <body class="flex-column">
     <!-- Nice banner at top with gradient background  -->
-  <header class="hero">
-    <h1 class="app-title">
-      <i class="fab fa-github"></i> Weather Dashboard
-    </h1>
-  </header>
+    <header class="hero">
+        <h1 class="app-title">
+            <i class="fab fa-github"></i> Weather Dashboard
+        </h1>
+    </header>
 
 
-  <main class="flex-row justify-space-between">
-    <div class="col-12 col-md-4">
-      <div class="card">
-          <!-- UI starts with city of preference  -->
-        <h3 class="card-header">Search for a City:</h3>
-        <form id="user-form" class="card-body">
-          <input name="cityname" id="cityname" type="text" autofocus="true" placeholder="City Name" class="form-input" />
-          <button type="submit" class="btn">Get 5 Day Forecast</button>
-        </form>
-      </div>
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <!-- UI starts with city of preference  -->
+                <h3 class="card-header">Search for a City:</h3>
+                <form id="user-form" class="card-body">
+                    <input name="cityname" id="cityname" type="text" autofocus="true" placeholder="City Name"
+                        class="form-input" />
+                    <button type="submit" class="btn">Get 5 Day Forecast</button>
+                </form>
+            </div>
 
-      <div class="card">
-        <h4 class="card-header text-uppercase">Search History</h4>
-        <!-- <div id="language-buttons" class="card-body"> -->
-            <ul id="searchHistory"></ul>
+            <div class="card">
+                <h4 class="card-header text-uppercase">Search History</h4>
+                <!-- <div id="language-buttons" class="card-body"> -->
+                <ul id="searchHistory"></ul>
 
+            </div>
         </div>
-      </div>
-    </div>
+        <div class="card d-flex flex-row justify-space-between">
+            <h3 class="card-header d-flex flex-row text-uppercase">Weather Details</h3>
+            <div id="weather-details" class="card-body d-flex flex-row justify-space-between">
+                <div id="day1" class="today">
+                    <h3 class="d-flex flex-row justify-center today">Today</h3>
+                    <ul>
+                        <li class="currently"><strong>Currently</strong> <span></span></li>
+                        <li class="temp"><strong>Temp:</strong> <span></span></li>
+                        <li class="humidity"><strong>Humidity:</strong> <span></span></li>
+                        <li class="windspeed"><strong>Wind Speed:</strong> <span></span></li>
+                        <li class="feelslike"><strong>Feels Like:</strong> <span></span></li>
+                    </ul>
+                </div>
+            </div>
 
-    <div class="col-12 col-md-8">
-      <h2 class="subtitle">xxxxx <span id="repo-search-term"></span></h2>
-      <!-- There needs to be an empty HTML element for us to write repository data to. -->
-      <div id="repos-container" class="list-group"></div>
-    </div>
-  </main>
+            <div class="d-flex flex-row daily">
+                <div id="day2" class="tomorrowForward card d-flex flex-row justify-center">
+                    <h3 class="daily">Tomorrow</h3>
+                    <ul>
+                        <li class="temp"><strong>Temp:</strong> <span></span></li>
+                        <li class="humidity"><strong>Humidity:</strong> <span></span></li>
+                        <li class="windspeed"><strong>Wind Speed:</strong> <span></span></li>
+                        <li class="feelslike"><strong>Feels Like:</strong> <span></span></li>
+                    </ul>
+                </div>
+                <div id="day3" class="tomorrowForward card d-flex flex-row daily">
+                    <h3 class="daily">Day 3</h3>
+                    <ul>
+                        <li class="temp"><strong>Temp:</strong> <span></span></li>
+                        <li class="humidity"><strong>Humidity:</strong> <span></span></li>
+                        <li class="windspeed"><strong>Wind Speed:</strong> <span></span></li>
+                        <li class="feelslike"><strong>Feels Like:</strong> <span></span></li>
+                    </ul>
+                </div>
+                <div id="day4" class="tomorrowForward card d-flex flex-row daily">
+                    <h3 class="daily">Day 4</h3>
+                    <ul>
+                        <li class="temp"><strong>Temp:</strong> <span></span></li>
+                        <li class="humidity"><strong>Humidity:</strong> <span></span></li>
+                        <li class="windspeed"><strong>Wind Speed:</strong> <span></span></li>
+                        <li class="feelslike"><strong>Feels Like:</strong> <span></span></li>
+                    </ul>
+                </div>
+                <div id="day5" class="tomorrowForward card d-flex flex-row daily">
+                    <h3 class="daily">Day 5</h3>
+                    <ul>
+                        <li class="temp"><strong>Temp:</strong> <span></span></li>
+                        <li class="humidity"><strong>Humidity:</strong> <span></span></li>
+                        <li class="windspeed"><strong>Wind Speed:</strong> <span></span></li>
+                        <li class="feelslike"><strong>Feels Like:</strong> <span></span></li>
+                    </ul>
+                </div>
+            </div>
 
-  <script src="./assets/js/script.js"></script>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
